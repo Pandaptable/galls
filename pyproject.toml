@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "galls"
+version = "0.1.0"
+description = ""
+authors = ["Pandaptable <panda@pandaptable.moe>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11"
+PyAutoGUI = "^0.9.54"
+dotenv = "^0.0.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
