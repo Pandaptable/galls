@@ -43,19 +43,19 @@ class FishWeight:
 
 def cast_line(username):
     time.sleep(1)
-    write_command(f"say [GOFISH] 🎣 Player {username} is casting their line...")
+    write_command(f"say [GOFISH] ♌︎ Player {username} is casting their line...")
     press_key()
     time.sleep(1)
     weather = get_weather()
-    write_command(f"say [GOFISH] >> {username}: 🌊 You casted your line on {weather[1]} weather")
+    write_command(f"say [GOFISH] >> {username}: ☁︎ You casted your line on {weather[1]} weather")
     press_key()
     time.sleep(1)
     if random.randint(0, 2) == 0:
-        write_command(f"say [GOFISH] >> {username}: 🙁 You didnt catch anything, try again later...")
+        write_command(f"say [GOFISH] >> {username}: (ó﹏ò｡) You didnt catch anything, try again later...")
         press_key()
     else:
         fish_name, price, weight = get_fish_result(weather[0])
-        write_command(f"say [GOFISH] >> {username}: 🐠 You caught a {fish_name}! ⚖️ It weighs {round(weight, 2)}kg and is worth around 💲{round(price, 2)}")
+        write_command(f"say [GOFISH] >> {username}: 〈͜͡˒ ⋊ You caught a {fish_name}! ⚖️ It weighs {round(weight, 2)}kg and is worth around ${round(price, 2)}")
         press_key()
 
 def load_fish_db():
