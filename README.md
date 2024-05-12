@@ -18,6 +18,10 @@ Galls is a somewhat simple python script to generate responses to commands by se
 - `!flash`
   - Will simulate a flashbang on your client (thanks psp <3)
   - Required setup: https://gist.github.com/Pandaptable/e2212377704d198c69aab6e1b5d22e86
+ 
+### Demo Video
+
+[Demo](https://github.com/Pandaptable/galls/assets/80334807/7a646185-6139-43b3-8f46-de1cdbc64c6c)
 
 ## Requirements
 
