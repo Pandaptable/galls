@@ -21,19 +21,13 @@ def listen(logFile):
         parse(line)
 
 def parse(line):
-    regex = re.findall(r"(!\w+(?:\s+\S+)*)", line)
-    user_regex = re.search(r"\[ALL\]\s+(\w+)‎:", line)
-    if user_regex:
-        username = user_regex.group(1)
+    regex = re.search(r"\[(?:ALL|(?:C)?(?:T)?)\]\s+(.*)‎(?:﹫\w+)?\s*(?:\[DEAD\])?:(?:\s)?(\S+)?\s(\S+)?", line, flags=re.UNICODE)
+    if regex:
+        username = regex.group(1)
+        command = regex.group(2)
+        args = regex.group(3)
     else:
         username = ""
-
-    if regex:
-        command_with_args = regex[0]
-        command_args_split = command_with_args.split(maxsplit=1)
-        command = command_args_split[0]
-        args = command_args_split[1] if len(command_args_split) > 1 else ''
-    else:
         command = ""
         args = ""
 
